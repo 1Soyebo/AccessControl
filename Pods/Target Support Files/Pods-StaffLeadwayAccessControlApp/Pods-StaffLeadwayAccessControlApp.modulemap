@@ -1,0 +1,6 @@
+framework module Pods_StaffLeadwayAccessControlApp {
+  umbrella header "Pods-StaffLeadwayAccessControlApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="vcAddress" customModule="StaffLeadwayAccessControlApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnNext" destination="QFP-e8-QSt" id="hYb-Dx-LDB"/>
+                <outlet property="img" destination="Nth-m1-r7A" id="ALF-PZ-Vlv"/>
+                <outlet property="txtAddress1" destination="xiU-A2-AjM" id="tQs-p9-ePt"/>
+                <outlet property="txtCity" destination="AUb-7d-sJk" id="nQU-LB-eHu"/>
+                <outlet property="txtState" destination="JBy-vX-1mj" id="CNd-MY-J9b"/>
+                <outlet property="txtVisitorCompany" destination="mw7-Ng-dX5" id="g4o-LT-DzK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gu-co-PEG">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1035"/>
+                    <color key="backgroundColor" red="0.87136394189999999" green="0.84962991200000004" blue="0.88421109639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whitebackground" translatesAutoresizingMaskIntoConstraints="NO" id="Nth-m1-r7A">
+                    <rect key="frame" x="38" y="79" width="692" height="866"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-e8-QSt">
+                    <rect key="frame" x="50" y="889" width="668" height="37"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.35686274509999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="DFk-2C-RcQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <state key="normal" title="NEXT">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnCreateAppointment:" destination="-1" eventType="touchUpInside" id="3F2-BQ-GP8"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KZa-Mk-3x0">
+                    <rect key="frame" x="73" y="198" width="622" height="266"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xiU-A2-AjM" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="0.0" width="622" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="N07-LQ-u1U"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="rGL-Bg-1Pl"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="VISITOR COMPANY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-Ng-dX5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="74" width="622" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="814-NY-uWh"/>
+                                <constraint firstAttribute="height" constant="44" id="Hch-2R-6SY"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="269" placeholderIntrinsicHeight="44" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="STATE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBy-vX-1mj" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="148" width="622" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="24y-VC-Lcd"/>
+                                <constraint firstAttribute="height" constant="44" id="SAF-ld-W4X"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="269" placeholderIntrinsicHeight="44" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="CITY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AUb-7d-sJk" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="222" width="622" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="5dH-NP-aoT"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="95z-UH-ltf"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="AUb-7d-sJk" firstAttribute="top" secondItem="JBy-vX-1mj" secondAttribute="bottom" constant="30" id="67V-MG-FfS"/>
+                        <constraint firstItem="mw7-Ng-dX5" firstAttribute="top" secondItem="xiU-A2-AjM" secondAttribute="bottom" constant="30" id="vMu-Hh-Kae"/>
+                        <constraint firstItem="JBy-vX-1mj" firstAttribute="top" secondItem="mw7-Ng-dX5" secondAttribute="bottom" constant="30" id="whZ-uv-PGn"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nth-m1-r7A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="59" id="Aio-Ew-VSg"/>
+                <constraint firstItem="QFP-e8-QSt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="DtG-sE-lke"/>
+                <constraint firstItem="3Gu-co-PEG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dtw-I4-1NW"/>
+                <constraint firstItem="KZa-Mk-3x0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="178" id="IOI-Qw-YQa"/>
+                <constraint firstItem="Nth-m1-r7A" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Jjv-cu-EvL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KZa-Mk-3x0" secondAttribute="trailing" constant="73" id="S6e-N3-7HK"/>
+                <constraint firstItem="Nth-m1-r7A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="UeT-g2-AEV"/>
+                <constraint firstItem="KZa-Mk-3x0" firstAttribute="centerX" secondItem="QFP-e8-QSt" secondAttribute="centerX" id="XFa-Zh-gj1"/>
+                <constraint firstItem="Nth-m1-r7A" firstAttribute="centerX" secondItem="3Gu-co-PEG" secondAttribute="centerX" id="azB-Hv-kl1"/>
+                <constraint firstItem="KZa-Mk-3x0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="73" id="l26-iC-tdc"/>
+                <constraint firstAttribute="trailing" secondItem="3Gu-co-PEG" secondAttribute="trailing" id="lBb-D0-fvC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QFP-e8-QSt" secondAttribute="bottom" constant="98" id="oMu-Sd-cum"/>
+                <constraint firstItem="Nth-m1-r7A" firstAttribute="centerX" secondItem="QFP-e8-QSt" secondAttribute="centerX" id="wN0-Za-aCz"/>
+                <constraint firstAttribute="bottom" secondItem="3Gu-co-PEG" secondAttribute="bottom" constant="-11" id="wbS-l1-VqH"/>
+                <constraint firstItem="3Gu-co-PEG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yIg-eV-bRA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Whitebackground" width="2560" height="1440"/>
+    </resources>
+</document>

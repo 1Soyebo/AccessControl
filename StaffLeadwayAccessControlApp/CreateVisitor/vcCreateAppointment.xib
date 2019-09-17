@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="vcCreateAppointment" customModule="StaffLeadwayAccessControlApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnNext" destination="sDi-Wx-164" id="ATV-Dm-8ZU"/>
+                <outlet property="btnNowOrLater" destination="nHj-bz-wgm" id="XXa-8J-ftr"/>
+                <outlet property="imgCard" destination="1d0-fu-VIA" id="1Gv-PV-W4c"/>
+                <outlet property="lblVisitorName" destination="Bbl-IH-Soi" id="fKV-xN-E05"/>
+                <outlet property="txtArrivalDste" destination="ryj-id-mQm" id="lhu-gs-gxr"/>
+                <outlet property="txtArrivalTime" destination="85f-2a-8ch" id="DnE-EP-YD8"/>
+                <outlet property="txtDuration" destination="LPK-22-DBd" id="lpD-sL-Qe8"/>
+                <outlet property="txtResaonForVisit" destination="nlz-Gz-wYa" id="UaM-NY-oAV"/>
+                <outlet property="view" destination="pFw-dj-8YY" id="8wM-Xj-eXX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pFw-dj-8YY">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58N-LJ-BcD">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1035"/>
+                    <color key="backgroundColor" red="0.87136394189999999" green="0.84962991200000004" blue="0.88421109639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whitebackground" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-fu-VIA">
+                    <rect key="frame" x="38" y="79" width="692" height="915"/>
+                    <color key="backgroundColor" red="0.79963970184326172" green="0.80755501985549927" blue="0.82823473215103149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-Id-kBK">
+                    <rect key="frame" x="50" y="150" width="668" height="421"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-IH-Soi">
+                            <rect key="frame" x="0.0" y="0.0" width="668" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="AUX-81-eAU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHj-bz-wgm">
+                            <rect key="frame" x="0.0" y="76" width="668" height="45"/>
+                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Mwd-p2-LFR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <state key="normal" title="NOW OR LATER">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="YOUR_BUTTON__TAP_ACTION:" destination="-1" eventType="touchUpInside" id="aEA-a1-gTg"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ARRIVAL DATE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-id-mQm" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="152" width="668" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="2oJ-fy-ALU"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ARRIVAL TIME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85f-2a-8ch" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="227" width="668" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="7yN-ce-IGL"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="DURATION" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPK-22-DBd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="302" width="668" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Icu-3k-Z2F"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="REASON" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlz-Gz-wYa" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="0.0" y="377" width="668" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="9iw-lO-I3Q"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-Wx-164">
+                    <rect key="frame" x="50" y="946" width="668" height="38"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.35686274509999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="Bpw-lT-rgY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <state key="normal" title="NEXT">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnCreateAppoinment:" destination="-1" eventType="touchUpInside" id="pIo-GI-k94"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0sT-Id-kBK" firstAttribute="top" secondItem="iUI-st-cTx" secondAttribute="top" constant="130" id="1uw-px-dsN"/>
+                <constraint firstItem="iUI-st-cTx" firstAttribute="bottom" secondItem="sDi-Wx-164" secondAttribute="bottom" constant="40" id="6Jm-RQ-2fn"/>
+                <constraint firstItem="1d0-fu-VIA" firstAttribute="top" secondItem="iUI-st-cTx" secondAttribute="top" constant="59" id="7Sj-sx-kBv"/>
+                <constraint firstItem="iUI-st-cTx" firstAttribute="bottom" secondItem="1d0-fu-VIA" secondAttribute="bottom" constant="30" id="Hiq-v5-Ep5"/>
+                <constraint firstAttribute="bottom" secondItem="58N-LJ-BcD" secondAttribute="bottom" constant="-11" id="L9h-tf-Q82"/>
+                <constraint firstItem="iUI-st-cTx" firstAttribute="trailing" secondItem="1d0-fu-VIA" secondAttribute="trailing" constant="38" id="NZq-A9-J4S"/>
+                <constraint firstItem="sDi-Wx-164" firstAttribute="leading" secondItem="iUI-st-cTx" secondAttribute="leading" constant="50" id="Oh0-LF-DEX"/>
+                <constraint firstItem="0sT-Id-kBK" firstAttribute="leading" secondItem="iUI-st-cTx" secondAttribute="leading" constant="50" id="Seq-B3-5hX"/>
+                <constraint firstAttribute="trailing" secondItem="58N-LJ-BcD" secondAttribute="trailing" id="XGE-Gc-Ath"/>
+                <constraint firstItem="58N-LJ-BcD" firstAttribute="leading" secondItem="pFw-dj-8YY" secondAttribute="leading" id="dDv-QV-o7p"/>
+                <constraint firstItem="sDi-Wx-164" firstAttribute="centerX" secondItem="pFw-dj-8YY" secondAttribute="centerX" id="ff8-3e-UeW"/>
+                <constraint firstItem="1d0-fu-VIA" firstAttribute="leading" secondItem="iUI-st-cTx" secondAttribute="leading" constant="38" id="k83-DF-NQF"/>
+                <constraint firstItem="iUI-st-cTx" firstAttribute="trailing" secondItem="0sT-Id-kBK" secondAttribute="trailing" constant="50" id="uRS-jY-adr"/>
+                <constraint firstItem="58N-LJ-BcD" firstAttribute="top" secondItem="pFw-dj-8YY" secondAttribute="top" id="zVn-2i-cik"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="iUI-st-cTx"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Whitebackground" width="2560" height="1440"/>
+    </resources>
+</document>

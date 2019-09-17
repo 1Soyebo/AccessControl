@@ -3,18 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63320EF32323140100886A12 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63320EF22323140100886A12 /* City.swift */; };
+		63320EF52323142700886A12 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63320EF42323142700886A12 /* States.swift */; };
+		633970DD232280B900B1F21F /* vcSpecificAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633970DB232280B900B1F21F /* vcSpecificAppointment.swift */; };
+		633970DE232280B900B1F21F /* vcSpecificAppointment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633970DC232280B900B1F21F /* vcSpecificAppointment.xib */; };
+		633970E42322B19B00B1F21F /* vcLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633970E32322B19B00B1F21F /* vcLaunchScreen.swift */; };
+		63399B25232440C500064610 /* AppointmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63399B24232440C500064610 /* AppointmentList.swift */; };
+		63399B2A232449FB00064610 /* cellAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63399B28232449FB00064610 /* cellAppointment.swift */; };
+		63399B2B232449FB00064610 /* cellAppointment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63399B29232449FB00064610 /* cellAppointment.xib */; };
+		63399B2E232475CD00064610 /* DetailsAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63399B2D232475CD00064610 /* DetailsAppointment.swift */; };
+		6339A01E2321174D00AAEFBB /* vcCreateAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339A01C2321174D00AAEFBB /* vcCreateAppointment.swift */; };
+		6339A01F2321174D00AAEFBB /* vcCreateAppointment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6339A01D2321174D00AAEFBB /* vcCreateAppointment.xib */; };
+		6339A02123211DBA00AAEFBB /* vcRecallVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339A02023211DBA00AAEFBB /* vcRecallVisitor.swift */; };
+		6339A02323214FD700AAEFBB /* vcMyQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339A02223214FD700AAEFBB /* vcMyQRCode.swift */; };
+		6339A0252321645800AAEFBB /* vcHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339A0242321645800AAEFBB /* vcHistory.swift */; };
+		633E1F002329074C0029C6E9 /* vcTodayAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E1EFF2329074C0029C6E9 /* vcTodayAppointment.swift */; };
+		633E1F022329075A0029C6E9 /* vcTodayAppointment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633E1F012329075A0029C6E9 /* vcTodayAppointment.xib */; };
+		634597592326B29600A38BBC /* cellSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634597572326B29600A38BBC /* cellSpecific.swift */; };
+		6345975A2326B29600A38BBC /* cellSpecific.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634597582326B29600A38BBC /* cellSpecific.xib */; };
 		636959DA231FFD6F0089749C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636959D9231FFD6F0089749C /* AppDelegate.swift */; };
 		636959DC231FFD6F0089749C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636959DB231FFD6F0089749C /* ViewController.swift */; };
 		636959DF231FFD6F0089749C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636959DD231FFD6F0089749C /* Main.storyboard */; };
 		636959E1231FFD6F0089749C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636959E0231FFD6F0089749C /* Assets.xcassets */; };
 		636959E4231FFD6F0089749C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636959E2231FFD6F0089749C /* LaunchScreen.storyboard */; };
+		636959F1232020340089749C /* vcHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636959EF232020340089749C /* vcHome.swift */; };
+		636959F2232020340089749C /* vcHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636959F0232020340089749C /* vcHome.xib */; };
+		636959FB232036800089749C /* vcCreateVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636959F9232036800089749C /* vcCreateVisitor.swift */; };
+		636959FC232036800089749C /* vcCreateVisitor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636959FA232036800089749C /* vcCreateVisitor.xib */; };
+		636959FE23203C3B0089749C /* vcAddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636959FD23203C3B0089749C /* vcAddress.xib */; };
+		63695A0023203C480089749C /* vcAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636959FF23203C480089749C /* vcAddress.swift */; };
+		D2E9A35BAFB2DF701A471696 /* Pods_StaffLeadwayAccessControlApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D987792DA7894B41928526 /* Pods_StaffLeadwayAccessControlApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63320EF22323140100886A12 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		63320EF42323142700886A12 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		633970DB232280B900B1F21F /* vcSpecificAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcSpecificAppointment.swift; sourceTree = "<group>"; };
+		633970DC232280B900B1F21F /* vcSpecificAppointment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = vcSpecificAppointment.xib; sourceTree = "<group>"; };
+		633970E32322B19B00B1F21F /* vcLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcLaunchScreen.swift; sourceTree = "<group>"; };
+		63399B24232440C500064610 /* AppointmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentList.swift; sourceTree = "<group>"; };
+		63399B28232449FB00064610 /* cellAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellAppointment.swift; sourceTree = "<group>"; };
+		63399B29232449FB00064610 /* cellAppointment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellAppointment.xib; sourceTree = "<group>"; };
+		63399B2D232475CD00064610 /* DetailsAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAppointment.swift; sourceTree = "<group>"; };
+		6339A01C2321174D00AAEFBB /* vcCreateAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcCreateAppointment.swift; sourceTree = "<group>"; };
+		6339A01D2321174D00AAEFBB /* vcCreateAppointment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = vcCreateAppointment.xib; sourceTree = "<group>"; };
+		6339A02023211DBA00AAEFBB /* vcRecallVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcRecallVisitor.swift; sourceTree = "<group>"; };
+		6339A02223214FD700AAEFBB /* vcMyQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcMyQRCode.swift; sourceTree = "<group>"; };
+		6339A0242321645800AAEFBB /* vcHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcHistory.swift; sourceTree = "<group>"; };
+		633E1EFF2329074C0029C6E9 /* vcTodayAppointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcTodayAppointment.swift; sourceTree = "<group>"; };
+		633E1F012329075A0029C6E9 /* vcTodayAppointment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vcTodayAppointment.xib; sourceTree = "<group>"; };
+		634597572326B29600A38BBC /* cellSpecific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellSpecific.swift; sourceTree = "<group>"; };
+		634597582326B29600A38BBC /* cellSpecific.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellSpecific.xib; sourceTree = "<group>"; };
 		636959D6231FFD6F0089749C /* StaffLeadwayAccessControlApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffLeadwayAccessControlApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636959D9231FFD6F0089749C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		636959DB231FFD6F0089749C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +65,15 @@
 		636959E0231FFD6F0089749C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		636959E3231FFD6F0089749C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		636959E5231FFD6F0089749C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636959EF232020340089749C /* vcHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcHome.swift; sourceTree = "<group>"; };
+		636959F0232020340089749C /* vcHome.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = vcHome.xib; sourceTree = "<group>"; };
+		636959F9232036800089749C /* vcCreateVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vcCreateVisitor.swift; sourceTree = "<group>"; };
+		636959FA232036800089749C /* vcCreateVisitor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = vcCreateVisitor.xib; sourceTree = "<group>"; };
+		636959FD23203C3B0089749C /* vcAddress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vcAddress.xib; sourceTree = "<group>"; };
+		636959FF23203C480089749C /* vcAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcAddress.swift; sourceTree = "<group>"; };
+		DD43F58BF79D0D9E1E31BB7E /* Pods-StaffLeadwayAccessControlApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaffLeadwayAccessControlApp.release.xcconfig"; path = "Target Support Files/Pods-StaffLeadwayAccessControlApp/Pods-StaffLeadwayAccessControlApp.release.xcconfig"; sourceTree = "<group>"; };
+		E5EB873640BA9663B7433FB3 /* Pods-StaffLeadwayAccessControlApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaffLeadwayAccessControlApp.debug.xcconfig"; path = "Target Support Files/Pods-StaffLeadwayAccessControlApp/Pods-StaffLeadwayAccessControlApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F6D987792DA7894B41928526 /* Pods_StaffLeadwayAccessControlApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaffLeadwayAccessControlApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +81,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E9A35BAFB2DF701A471696 /* Pods_StaffLeadwayAccessControlApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63320EF0232313C500886A12 /* CreateVisitor */ = {
+			isa = PBXGroup;
+			children = (
+				636959F9232036800089749C /* vcCreateVisitor.swift */,
+				636959FA232036800089749C /* vcCreateVisitor.xib */,
+				636959FF23203C480089749C /* vcAddress.swift */,
+				636959FD23203C3B0089749C /* vcAddress.xib */,
+				6339A01C2321174D00AAEFBB /* vcCreateAppointment.swift */,
+				6339A01D2321174D00AAEFBB /* vcCreateAppointment.xib */,
+			);
+			path = CreateVisitor;
+			sourceTree = "<group>";
+		};
+		63320EF1232313E600886A12 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63320EF22323140100886A12 /* City.swift */,
+				63320EF42323142700886A12 /* States.swift */,
+				63399B24232440C500064610 /* AppointmentList.swift */,
+				63399B2D232475CD00064610 /* DetailsAppointment.swift */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		63399B2C2324668D00064610 /* View Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				6339A02023211DBA00AAEFBB /* vcRecallVisitor.swift */,
+				633E1EFF2329074C0029C6E9 /* vcTodayAppointment.swift */,
+				633E1F012329075A0029C6E9 /* vcTodayAppointment.xib */,
+			);
+			path = "View Appointments";
+			sourceTree = "<group>";
+		};
+		6345346923255D94008FA73B /* View Today */ = {
+			isa = PBXGroup;
+			children = (
+				6339A0242321645800AAEFBB /* vcHistory.swift */,
+				633970DB232280B900B1F21F /* vcSpecificAppointment.swift */,
+				633970DC232280B900B1F21F /* vcSpecificAppointment.xib */,
+			);
+			path = "View Today";
+			sourceTree = "<group>";
+		};
+		6345346A23255DCE008FA73B /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				63399B28232449FB00064610 /* cellAppointment.swift */,
+				63399B29232449FB00064610 /* cellAppointment.xib */,
+				634597572326B29600A38BBC /* cellSpecific.swift */,
+				634597582326B29600A38BBC /* cellSpecific.xib */,
+			);
+			path = Customs;
+			sourceTree = "<group>";
+		};
 		636959CD231FFD6E0089749C = {
 			isa = PBXGroup;
 			children = (
 				636959D8231FFD6F0089749C /* StaffLeadwayAccessControlApp */,
 				636959D7231FFD6F0089749C /* Products */,
+				92C6EACD9C93397A467EE51C /* Pods */,
+				8A28E30F018CBFF9259BCB8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +164,40 @@
 		636959D8231FFD6F0089749C /* StaffLeadwayAccessControlApp */ = {
 			isa = PBXGroup;
 			children = (
+				6345346A23255DCE008FA73B /* Customs */,
+				6345346923255D94008FA73B /* View Today */,
+				63399B2C2324668D00064610 /* View Appointments */,
+				63320EF1232313E600886A12 /* Helper Classes */,
+				63320EF0232313C500886A12 /* CreateVisitor */,
 				636959D9231FFD6F0089749C /* AppDelegate.swift */,
 				636959DB231FFD6F0089749C /* ViewController.swift */,
 				636959DD231FFD6F0089749C /* Main.storyboard */,
 				636959E0231FFD6F0089749C /* Assets.xcassets */,
 				636959E2231FFD6F0089749C /* LaunchScreen.storyboard */,
 				636959E5231FFD6F0089749C /* Info.plist */,
+				636959EF232020340089749C /* vcHome.swift */,
+				636959F0232020340089749C /* vcHome.xib */,
+				6339A02223214FD700AAEFBB /* vcMyQRCode.swift */,
+				633970E32322B19B00B1F21F /* vcLaunchScreen.swift */,
 			);
 			path = StaffLeadwayAccessControlApp;
+			sourceTree = "<group>";
+		};
+		8A28E30F018CBFF9259BCB8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6D987792DA7894B41928526 /* Pods_StaffLeadwayAccessControlApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92C6EACD9C93397A467EE51C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5EB873640BA9663B7433FB3 /* Pods-StaffLeadwayAccessControlApp.debug.xcconfig */,
+				DD43F58BF79D0D9E1E31BB7E /* Pods-StaffLeadwayAccessControlApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 636959E8231FFD6F0089749C /* Build configuration list for PBXNativeTarget "StaffLeadwayAccessControlApp" */;
 			buildPhases = (
+				96E985592F513BD4CC867C24 /* [CP] Check Pods Manifest.lock */,
 				636959D2231FFD6F0089749C /* Sources */,
 				636959D3231FFD6F0089749C /* Frameworks */,
 				636959D4231FFD6F0089749C /* Resources */,
+				AAA8A1E20E20667327BA3D6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -90,6 +228,10 @@
 		636959CE231FFD6E0089749C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					20,
+					c,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = MacUser;
@@ -122,21 +264,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633970DE232280B900B1F21F /* vcSpecificAppointment.xib in Resources */,
 				636959E4231FFD6F0089749C /* LaunchScreen.storyboard in Resources */,
+				636959FE23203C3B0089749C /* vcAddress.xib in Resources */,
+				636959F2232020340089749C /* vcHome.xib in Resources */,
 				636959E1231FFD6F0089749C /* Assets.xcassets in Resources */,
+				636959FC232036800089749C /* vcCreateVisitor.xib in Resources */,
+				633E1F022329075A0029C6E9 /* vcTodayAppointment.xib in Resources */,
 				636959DF231FFD6F0089749C /* Main.storyboard in Resources */,
+				6339A01F2321174D00AAEFBB /* vcCreateAppointment.xib in Resources */,
+				63399B2B232449FB00064610 /* cellAppointment.xib in Resources */,
+				6345975A2326B29600A38BBC /* cellSpecific.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96E985592F513BD4CC867C24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StaffLeadwayAccessControlApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAA8A1E20E20667327BA3D6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StaffLeadwayAccessControlApp/Pods-StaffLeadwayAccessControlApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StaffLeadwayAccessControlApp/Pods-StaffLeadwayAccessControlApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StaffLeadwayAccessControlApp/Pods-StaffLeadwayAccessControlApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		636959D2231FFD6F0089749C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6339A02323214FD700AAEFBB /* vcMyQRCode.swift in Sources */,
+				6339A01E2321174D00AAEFBB /* vcCreateAppointment.swift in Sources */,
 				636959DC231FFD6F0089749C /* ViewController.swift in Sources */,
+				636959FB232036800089749C /* vcCreateVisitor.swift in Sources */,
+				6339A02123211DBA00AAEFBB /* vcRecallVisitor.swift in Sources */,
 				636959DA231FFD6F0089749C /* AppDelegate.swift in Sources */,
+				6339A0252321645800AAEFBB /* vcHistory.swift in Sources */,
+				634597592326B29600A38BBC /* cellSpecific.swift in Sources */,
+				633E1F002329074C0029C6E9 /* vcTodayAppointment.swift in Sources */,
+				633970E42322B19B00B1F21F /* vcLaunchScreen.swift in Sources */,
+				63695A0023203C480089749C /* vcAddress.swift in Sources */,
+				63399B25232440C500064610 /* AppointmentList.swift in Sources */,
+				63320EF52323142700886A12 /* States.swift in Sources */,
+				633970DD232280B900B1F21F /* vcSpecificAppointment.swift in Sources */,
+				636959F1232020340089749C /* vcHome.swift in Sources */,
+				63320EF32323140100886A12 /* City.swift in Sources */,
+				63399B2E232475CD00064610 /* DetailsAppointment.swift in Sources */,
+				63399B2A232449FB00064610 /* cellAppointment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,15 +488,18 @@
 		};
 		636959E9231FFD6F0089749C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EB873640BA9663B7433FB3 /* Pods-StaffLeadwayAccessControlApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X95S2573WT;
 				INFOPLIST_FILE = StaffLeadwayAccessControlApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.StaffLeadwayAccessControlApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.StaffLeadwayAccessControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,15 +508,18 @@
 		};
 		636959EA231FFD6F0089749C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD43F58BF79D0D9E1E31BB7E /* Pods-StaffLeadwayAccessControlApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X95S2573WT;
 				INFOPLIST_FILE = StaffLeadwayAccessControlApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.StaffLeadwayAccessControlApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.StaffLeadwayAccessControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Floaty (4.2.0)
+  - IQKeyboardManager (6.4.0)
+  - SkyFloatingLabelTextField (3.7.0)
+  - SVPinView (1.0.7)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - Floaty
+  - IQKeyboardManager
+  - SkyFloatingLabelTextField
+  - SVPinView
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Floaty
+    - IQKeyboardManager
+    - SkyFloatingLabelTextField
+    - SVPinView
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
+  SVPinView: 6c1da57e4a1273298802f460c60511ba10f7c831
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 051424ed495b1a65a1d0620a913f9d9643c86517
+
+COCOAPODS: 1.7.5
