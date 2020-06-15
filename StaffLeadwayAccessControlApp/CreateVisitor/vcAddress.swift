@@ -42,7 +42,7 @@ class vcAddress: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var btnNext: UIButton!
     
-    
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +53,7 @@ class vcAddress: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
         hideKeyboardWhenTappedAround()
         img.layer.cornerRadius = 8.0
         img.clipsToBounds = true
+        
         let inputView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 240))
         statePicker=UIPickerView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 240))
         statePicker.dataSource=self;

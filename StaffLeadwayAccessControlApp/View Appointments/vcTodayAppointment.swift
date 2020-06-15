@@ -127,7 +127,7 @@ class vcTodayAppointment: UIViewController, UIScrollViewDelegate, UITableViewDel
     
     
     func moveToCreateAppointment(){
-        let koll = vcCreateAppointment(nibName:"vcCreateAppointment", bundle:nil)
+        let koll = vcCreateAppointment(nibName: "vcCreateAppointment", bundle: nil)
         koll.VisitorName = sName + " " + fName
         koll.VistorID = VisID
         navigationController?.pushViewController(koll, animated: true)

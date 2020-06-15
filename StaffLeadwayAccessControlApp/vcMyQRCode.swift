@@ -23,13 +23,19 @@ class vcMyQRCode: UIViewController, UITextFieldDelegate{
     var storedPin = UserDefaults.standard.string(forKey: "UserPIN")
     var noteTextField:UITextField!
     
-    var fName:String = UserDefaults.standard.object(forKey: "loggedFirstname") as! String
-    var sName:String = UserDefaults.standard.object(forKey: "loggedSurname") as! String
-    var CompanyName:String = UserDefaults.standard.object(forKey: "loggedCompnayName") as! String
-    var staffID:Int = UserDefaults.standard.integer(forKey: "loggedStaffID")
-    var QRCode:String = UserDefaults.standard.object(forKey: "loggedQrCode") as! String
-    var QrCode:Data = UserDefaults.standard.data(forKey: "loggedUrlData")!
-    
+//    var fName:String = UserDefaults.standard.object(forKey: "loggedFirstname") as! String
+//    var sName:String = UserDefaults.standard.object(forKey: "loggedSurname") as! String
+//    var CompanyName:String = UserDefaults.standard.object(forKey: "loggedCompnayName") as! String
+//    var staffID:Int = UserDefaults.standard.integer(forKey: "loggedStaffID")
+//    var QRCode:String = UserDefaults.standard.object(forKey: "loggedQrCode") as! String
+//    var QrCode:Data = UserDefaults.standard.data(forKey: "loggedUrlData")!
+//
+    var fName:String = ""
+    var sName:String = ""
+    var CompanyName:String = ""
+    var staffID:Int = 0
+    var QRCode:String = ""
+    //var QrCode:Data = Data("\u{24}")
     
     var newQRcode:String = ""
     var newerQR: String = ""
@@ -55,6 +61,7 @@ class vcMyQRCode: UIViewController, UITextFieldDelegate{
         //self.mainADLogin("", "", true);
 
         
+        
         lblFirstname.text = fName
         lblSurname.text = sName
         lblCompanyName.text = CompanyName
@@ -79,15 +86,15 @@ class vcMyQRCode: UIViewController, UITextFieldDelegate{
             self.txtNewpin = changePinController.textFields![1] as UITextField
             
             
-            var SaltPin_1 = "WATER" + self.txtOldpin.text![0] + "EARTH" + self.txtOldpin.text![1] + "FIRE" + self.txtOldpin.text![2] + "AIR" + self.txtOldpin.text![3]
+            let SaltPin_1 = "WATER" + self.txtOldpin.text![0] + "EARTH" + self.txtOldpin.text![1] + "FIRE" + self.txtOldpin.text![2] + "AIR" + self.txtOldpin.text![3]
             
-            var md5Data = self.md5(SaltPin_1)
-            var md5String = self.dataWithHexString(hex: md5Data)
-            var base64tings = md5String.base64EncodedString()
-            var newmd5Data = self.md5(base64tings)
+            let md5Data = self.md5(SaltPin_1)
+            let md5String = self.dataWithHexString(hex: md5Data)
+            let base64tings = md5String.base64EncodedString()
+            let newmd5Data = self.md5(base64tings)
             
-            var newmd5String = self.dataWithHexString(hex: newmd5Data)
-            var newbase64ting = newmd5String.base64EncodedString()
+            let newmd5String = self.dataWithHexString(hex: newmd5Data)
+            let newbase64ting = newmd5String.base64EncodedString()
             
             if newbase64ting != self.storedPin{
                 changePinController.message = "Pin Does Not Match"
@@ -161,7 +168,7 @@ class vcMyQRCode: UIViewController, UITextFieldDelegate{
                 if (wasSuccessful) {
                     
                     DispatchQueue.main.async {
-                        self.imgQR.image = UIImage(data: self.QrCode as Data)
+                        //self.imgQR.image = UIImage(data: self.QrCode as Data)
                     }
                     
                     
@@ -191,15 +198,15 @@ class vcMyQRCode: UIViewController, UITextFieldDelegate{
         let save = UIAlertAction(title: "Confirm", style: .default, handler: {alert -> Void in
             self.noteTextField = alertcontroller.textFields![0] as UITextField;
             
-            var SaltPin_1 = "WATER" + self.noteTextField.text![0] + "EARTH" + self.noteTextField.text![1] + "FIRE" + self.noteTextField.text![2] + "AIR" + self.noteTextField.text![3]
+            let SaltPin_1 = "WATER" + self.noteTextField.text![0] + "EARTH" + self.noteTextField.text![1] + "FIRE" + self.noteTextField.text![2] + "AIR" + self.noteTextField.text![3]
             
-            var md5Data = self.md5(SaltPin_1)
-            var md5String = self.dataWithHexString(hex: md5Data)
-            var base64tings = md5String.base64EncodedString()
-            var newmd5Data = self.md5(base64tings)
+            let md5Data = self.md5(SaltPin_1)
+            let md5String = self.dataWithHexString(hex: md5Data)
+            let base64tings = md5String.base64EncodedString()
+            let newmd5Data = self.md5(base64tings)
             
-            var newmd5String = self.dataWithHexString(hex: newmd5Data)
-            var newbase64ting = newmd5String.base64EncodedString()
+            let newmd5String = self.dataWithHexString(hex: newmd5Data)
+            let newbase64ting = newmd5String.base64EncodedString()
 
             
             if(newbase64ting != self.storedPin){
@@ -207,7 +214,7 @@ class vcMyQRCode: UIViewController, UITextFieldDelegate{
                 self.present(alertcontroller1, animated: true, completion: nil)
 
             }else{alertcontroller.removeFromParent()
-                self.imgQR.image = UIImage(data: self.QrCode as Data)
+                //self.imgQR.image = UIImage(data: self.QrCode as Data)
 
             }
         })

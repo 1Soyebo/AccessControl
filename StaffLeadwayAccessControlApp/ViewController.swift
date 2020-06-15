@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Group")!)
         //noteTextField.keyboardType = .numberPad
         
-       txtStaffID.layer.cornerRadius = 8.0
+        txtStaffID.layer.cornerRadius = 8.0
         txtStaffID.clipsToBounds = true
         btnTap.layer.cornerRadius = 8.0
         btnTap.clipsToBounds = true
@@ -142,155 +142,162 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btnLogin(_ sender: Any) {
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LandingPage")
+        self.navigationController?.navigationBar.isHidden = true
+        controller.modalPresentationStyle = .fullScreen
+        self.show(controller, sender: nil)
         
+        //self.navigationController?.show(controller, sender: nil)
         
-        if txtStaffID.text!.isEmpty{
-            SVProgressHUD.showError(withStatus: "Input Staff ID")
-        }else{
-        SVProgressHUD.show()
-            //txtStaffID.text = self.Pin
-            
-        DeviceID = UIDevice.current.name + UIDevice.current.identifierForVendor!.uuidString 
-        //DeviceID = "18651177-1006-4D2E-82F8-A921855412F9"
-        print(DeviceID)
-        
-        let todosEndpoint: String = "http://dynamics.somee.com/api/Staff/stafflogin"
-        
-        
-        
-        let param:Parameters = ["StaffID":"\(txtStaffID.text!)", "Device_ID":DeviceID]
-            print(txtStaffID.text!)
-            print("2")
-        Alamofire.request(todosEndpoint, method: .post, parameters: param,
-                          encoding: JSONEncoding.default)
-            .responseJSON { response in
-                guard response.result.error == nil else {
-                    // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
-                    print(response.result.error!)
-                    SVProgressHUD.showError(withStatus: "Network Error")
-                    return
-                }
-                // make sure we got some JSON since that's what we expect
-                guard let json = response.result.value as? [String: Any] else {
-                    print("didn't get todo object as JSON from API")
-                    if let error = response.result.error {
-                        print("Error: \(error)")
-                    }
-                    return
-                }
-                
-                
-                // get and print the title
-                print(json)
-                let success = json["Status"] as! Bool
-                let message = json["message"] as! String
-                //let passcode = json[]
-
-                if(success){
-                    SVProgressHUD.showSuccess(withStatus: message)
-                    self.loggedData = json["data"] as AnyObject
-                    self.loggedStats = self.loggedData
-                    let d = self.loggedStats as! Dictionary<String, Any>
-                    
-                    let StaffID = d["StaffID"] as! Int
-                    UserDefaults.standard.set(StaffID, forKey: "loggedStaffID")
-                    //self.loggedStat = true
-                    let Fistname = d["FirstName"] as! String
-                    UserDefaults.standard.set(Fistname, forKey: "loggedFirstname")
-                    let Surname = d["Surname"] as! String
-                    UserDefaults.standard.set(Surname, forKey: "loggedSurname")
-                    let email = d["Email"] as! String
-                    UserDefaults.standard.set(email, forKey: "loggedEmail")
-                    let phonenumber = d["PhoneNumber"] as! String
-                    UserDefaults.standard.set(phonenumber, forKey: "loggedPhoneNumber")
-                    let CompanyName = d["CompanyName"] as! String
-                    UserDefaults.standard.set(CompanyName, forKey: "loggedCompnayName")
-                    let FloorID = d["FloorID"] as! Int
-                    UserDefaults.standard.set(FloorID, forKey: "loggedFloorID")
-                    let QRCodeUrl = d["QRCodeURL"] as! String
-                    UserDefaults.standard.set(QRCodeUrl, forKey: "loggedQrCode")
-                    let AccessCode = d["AccessCode"] as! String
-                    UserDefaults.standard.set(AccessCode, forKey: "loggedAccessCode")
-                    let passcode = d["Passcode"] as! String
-                    print(passcode)
-                    
-                    var num = "5331"
-                    var SaltPin_1 = "WATER" + num[0] + "EARTH" + num[1] + "FIRE" + num[2] + "AIR" + num[3]
-
-                    var md5Data = self.md5(SaltPin_1)
-                    var md5String = self.dataWithHexString(hex: md5Data)
-                    var base64tings = md5String.base64EncodedString()
-
-                    print(base64tings)
-
-                    var newmd5Data = self.md5(base64tings)
-
-                    var newmd5String = self.dataWithHexString(hex: newmd5Data)
-                    var newbase64ting = newmd5String.base64EncodedString()
-                    print(newbase64ting)
-                    
-                    UserDefaults.standard.set(passcode, forKey: "UserPIN")
-                    self.Pin = UserDefaults.standard.string(forKey: "UserPin")
-                    
-                    
-                    self.newQRcode = QRCodeUrl.replacingOccurrences(of: "d:\\DZHosts\\LocalUser\\Massive_Dynamics\\", with: "http://")
-                    self.newerQR = self.newQRcode.replacingOccurrences(of: "\\", with: "/")
-                    print(self.newerQR)
-                    if let url = NSURL(string: self.newerQR){
-                        if let data = NSData(contentsOf: url as URL){
-                            UserDefaults.standard.set(data, forKey: "loggedUrlData")
-                            //viewCode.ImgData = data
-                            //imgQrCode.image = UIImage(data: data as Data)
-                        }
-                    }
-
-                    
-                    
-                    
-                    print(self.Pin)
-
-                    //SVProgressHUD.dismiss()
-                    
-                    //self.Pin =
-                    
-                    if !UserDefaults.standard.bool(forKey: "NotFirstTime") {
-                        self.AlertToAddPin()
-                    
-                    }
-                    
-                    
-                    print(self.encryptedpin)
-                    
-                    
-                    
-                    
-                    if self.encryptedpin == UserDefaults.standard.string(forKey: "UserPIN"){
-                    
-                    if UserDefaults.standard.bool(forKey: "LocalAuth") == true || UserDefaults.standard.bool(forKey: "PassCodesMatch") == true {
-                    UserDefaults.standard.set(true, forKey: "LoggedStatus")
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let controller = storyboard.instantiateViewController(withIdentifier: "LandingPage")
-                    self.present(controller, animated: true, completion: nil)
-                    }
-                    }else {
-                        
-                    }
-                }
-                else
-                {
-                    //print(self.DeviceID)
-                    //print(success)
-                    //print("k")
-                    
-                    //print("j")
-                    SVProgressHUD.showError(withStatus: message)
-                }
-        
-        
-        }
-    
-    }
+//        
+//        if txtStaffID.text!.isEmpty{
+//            SVProgressHUD.showError(withStatus: "Input Staff ID")
+//        }else{
+//        SVProgressHUD.show()
+//            //txtStaffID.text = self.Pin
+//            
+//        DeviceID = UIDevice.current.name + UIDevice.current.identifierForVendor!.uuidString 
+//        //DeviceID = "18651177-1006-4D2E-82F8-A921855412F9"
+//        print(DeviceID)
+//        
+//        let todosEndpoint: String = "http://dynamics.somee.com/api/Staff/stafflogin"
+//        
+//        
+//        
+//        let param:Parameters = ["StaffID":"\(txtStaffID.text!)", "Device_ID":DeviceID]
+//            print(txtStaffID.text!)
+//            print("2")
+//        Alamofire.request(todosEndpoint, method: .post, parameters: param,
+//                          encoding: JSONEncoding.default)
+//            .responseJSON { response in
+//                guard response.result.error == nil else {
+//                    // got an error in getting the data, need to handle it
+//                    print("error calling POST on /todos/1")
+//                    print(response.result.error!)
+//                    SVProgressHUD.showError(withStatus: "Network Error")
+//                    return
+//                }
+//                // make sure we got some JSON since that's what we expect
+//                guard let json = response.result.value as? [String: Any] else {
+//                    print("didn't get todo object as JSON from API")
+//                    if let error = response.result.error {
+//                        print("Error: \(error)")
+//                    }
+//                    return
+//                }
+//                
+//                
+//                // get and print the title
+//                print(json)
+//                let success = json["Status"] as! Bool
+//                let message = json["message"] as! String
+//                //let passcode = json[]
+//
+//                if(success){
+//                    SVProgressHUD.showSuccess(withStatus: message)
+//                    self.loggedData = json["data"] as AnyObject
+//                    self.loggedStats = self.loggedData
+//                    let d = self.loggedStats as! Dictionary<String, Any>
+//                    
+//                    let StaffID = d["StaffID"] as! Int
+//                    UserDefaults.standard.set(StaffID, forKey: "loggedStaffID")
+//                    //self.loggedStat = true
+//                    let Fistname = d["FirstName"] as! String
+//                    UserDefaults.standard.set(Fistname, forKey: "loggedFirstname")
+//                    let Surname = d["Surname"] as! String
+//                    UserDefaults.standard.set(Surname, forKey: "loggedSurname")
+//                    let email = d["Email"] as! String
+//                    UserDefaults.standard.set(email, forKey: "loggedEmail")
+//                    let phonenumber = d["PhoneNumber"] as! String
+//                    UserDefaults.standard.set(phonenumber, forKey: "loggedPhoneNumber")
+//                    let CompanyName = d["CompanyName"] as! String
+//                    UserDefaults.standard.set(CompanyName, forKey: "loggedCompnayName")
+//                    let FloorID = d["FloorID"] as! Int
+//                    UserDefaults.standard.set(FloorID, forKey: "loggedFloorID")
+//                    let QRCodeUrl = d["QRCodeURL"] as! String
+//                    UserDefaults.standard.set(QRCodeUrl, forKey: "loggedQrCode")
+//                    let AccessCode = d["AccessCode"] as! String
+//                    UserDefaults.standard.set(AccessCode, forKey: "loggedAccessCode")
+//                    let passcode = d["Passcode"] as! String
+//                    print(passcode)
+//                    
+//                    var num = "5331"
+//                    var SaltPin_1 = "WATER" + num[0] + "EARTH" + num[1] + "FIRE" + num[2] + "AIR" + num[3]
+//
+//                    var md5Data = self.md5(SaltPin_1)
+//                    var md5String = self.dataWithHexString(hex: md5Data)
+//                    var base64tings = md5String.base64EncodedString()
+//
+//                    print(base64tings)
+//
+//                    var newmd5Data = self.md5(base64tings)
+//
+//                    var newmd5String = self.dataWithHexString(hex: newmd5Data)
+//                    var newbase64ting = newmd5String.base64EncodedString()
+//                    print(newbase64ting)
+//                    
+//                    UserDefaults.standard.set(passcode, forKey: "UserPIN")
+//                    self.Pin = UserDefaults.standard.string(forKey: "UserPin")
+//                    
+//                    
+//                    self.newQRcode = QRCodeUrl.replacingOccurrences(of: "d:\\DZHosts\\LocalUser\\Massive_Dynamics\\", with: "http://")
+//                    self.newerQR = self.newQRcode.replacingOccurrences(of: "\\", with: "/")
+//                    print(self.newerQR)
+//                    if let url = NSURL(string: self.newerQR){
+//                        if let data = NSData(contentsOf: url as URL){
+//                            UserDefaults.standard.set(data, forKey: "loggedUrlData")
+//                            //viewCode.ImgData = data
+//                            //imgQrCode.image = UIImage(data: data as Data)
+//                        }
+//                    }
+//
+//                    
+//                    
+//                    
+//                    print(self.Pin)
+//
+//                    //SVProgressHUD.dismiss()
+//                    
+//                    //self.Pin =
+//                    
+//                    if !UserDefaults.standard.bool(forKey: "NotFirstTime") {
+//                        self.AlertToAddPin()
+//                    
+//                    }
+//                    
+//                    
+//                    print(self.encryptedpin)
+//                    
+//                    
+//                    
+//                    
+//                    if self.encryptedpin == UserDefaults.standard.string(forKey: "UserPIN"){
+//                    
+//                    if UserDefaults.standard.bool(forKey: "LocalAuth") == true || UserDefaults.standard.bool(forKey: "PassCodesMatch") == true {
+//                    UserDefaults.standard.set(true, forKey: "LoggedStatus")
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let controller = storyboard.instantiateViewController(withIdentifier: "LandingPage")
+//                    self.present(controller, animated: true, completion: nil)
+//                    }
+//                    }else {
+//                        
+//                    }
+//                }
+//                else
+//                {
+//                    //print(self.DeviceID)
+//                    //print(success)
+//                    //print("k")
+//                    
+//                    //print("j")
+//                    SVProgressHUD.showError(withStatus: message)
+//                }
+//        
+//        
+//        }
+//    
+//    }
 }
     
     
@@ -343,15 +350,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let save = UIAlertAction(title: "Submit", style: .default, handler: {alert -> Void in
                 self.noteTextField = alertcontroller.textFields![0] as UITextField
                 
-                var SaltPin_1 = "WATER" + self.noteTextField.text![0] + "EARTH" + self.noteTextField.text![1] + "FIRE" + self.noteTextField.text![2] + "AIR" + self.noteTextField.text![3]
+                let SaltPin_1 = "WATER" + self.noteTextField.text![0] + "EARTH" + self.noteTextField.text![1] + "FIRE" + self.noteTextField.text![2] + "AIR" + self.noteTextField.text![3]
                 
-                var md5Data = self.md5(SaltPin_1)
-                var md5String = self.dataWithHexString(hex: md5Data)
-                var base64tings = md5String.base64EncodedString()
-                var newmd5Data = self.md5(base64tings)
+                let md5Data = self.md5(SaltPin_1)
+                let md5String = self.dataWithHexString(hex: md5Data)
+                let base64tings = md5String.base64EncodedString()
+                let newmd5Data = self.md5(base64tings)
                 
-                var newmd5String = self.dataWithHexString(hex: newmd5Data)
-                var newbase64ting = newmd5String.base64EncodedString()
+                let newmd5String = self.dataWithHexString(hex: newmd5Data)
+                let newbase64ting = newmd5String.base64EncodedString()
                 self.encryptedpin = newbase64ting
                 
                 if(UserDefaults.standard.bool(forKey: "NotFirstTime")){

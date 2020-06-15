@@ -142,7 +142,7 @@ class vcCreateVisitor: UIViewController, CNContactPickerDelegate{
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contacts: [CNContact]) {
         contacts.forEach { contact in
             if let contactName = contact.givenName as? String {
-                let phoneNumber: String = "";
+                let _: String = "";
                 print("name: " + contactName, "contact.phoneNumbers: ", contact.phoneNumbers.count);
                 
                 if (contact.phoneNumbers.count > 0) {

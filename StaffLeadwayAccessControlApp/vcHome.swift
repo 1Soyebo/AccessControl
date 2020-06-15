@@ -57,7 +57,12 @@ class vcHome: UIViewController {
             
             UserDefaults.standard.set(false, forKey: "LoggedStatus")
             //tabBarController!.selectedViewController = controller
+            self.tabBarController?.tabBar.isHidden = true
+            controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
+            //self.show(controller, sender: nil)
+            controller.navigationItem.hidesBackButton = true
+            
             controller.AlertToAddPin()
         }))
         
